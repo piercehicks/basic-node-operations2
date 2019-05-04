@@ -1,0 +1,17 @@
+1)Run the commands sort, wc and uniq on the commands.js file.
+Explain how they work and what the output was.
+
+ - sort. Returned the lines of alphabetically ordered
+ - wc.  8      16     204 bash.js. Prints newline, word and the byte counts in
+      the bash file
+ - uniq. Cycles through the lines of code and only returns the differentiated ones.
+
+2) Using the pipe (|) connect at least two commands and run it on commands.js.
+Explain what the output was and why the specific data was outputted.
+
+Answer: I used wc to give me the counts and sort at the same time to give me the code
+    alphabetically
+
+
+
+6)
