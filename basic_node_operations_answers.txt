@@ -9,8 +9,7 @@ Explain how they work and what the output was.
 2) Using the pipe (|) connect at least two commands and run it on commands.js.
 Explain what the output was and why the specific data was outputted.
 
-Answer: I used wc to give me the counts and sort at the same time to give me the code
-    alphabetically
+Answer: I used wc to give me the counts of characters within the commands.js file
 
 
 
