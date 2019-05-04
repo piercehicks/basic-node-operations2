@@ -24,6 +24,10 @@ function evaluateCmd(userInput) {
       case "head":
        commandLibrary.cat(userInputArray.slice(0,1));
        break;
+
+       case "tail":
+        commandLibrary.cat(userInputArray.slice(command.length-1));
+        break;
   }
 }
 
@@ -47,7 +51,15 @@ const commandLibrary = {
             if (err) throw err;
             done(data);
         });
-    }
+    },
+
+    "tail": function(fullPath) {
+         const fileName = fullPath[0];
+         fs.readFile(fileName, (err, data) => {
+             if (err) throw err;
+             done(data);
+         });
+     }
 };
 
 module.exports.commandLibrary = commandLibrary;
