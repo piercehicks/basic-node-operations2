@@ -14,3 +14,10 @@ Answer: I used wc to give me the counts of characters within the commands.js fil
 
 
 6)
+
+function reverseString(inputString) {
+let splitStr = inputString.split('').reverse().join('');
+console.log(splitStr);
+}
+
+reverseString("I'm learning to program algorithms!");
