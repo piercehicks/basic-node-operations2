@@ -6,6 +6,7 @@ function done(output) {
     process.stdout.write('\nprompt > ');
 }
 
+
 function evaluateCmd(userInput) {
 
   const userInputArray = userInput.split(" ");
@@ -28,6 +29,9 @@ function evaluateCmd(userInput) {
        case "tail":
         commandLibrary.cat(userInputArray.slice(command.length-1));
         break;
+
+          default:
+          commandLibrary.errorHandler(userInputArray);
   }
 }
 
@@ -59,7 +63,12 @@ const commandLibrary = {
              if (err) throw err;
              done(data);
          });
-     }
+     },
+
+     errorHandler: function(userInput) {
+    done("Sorry "userInput + " is not a command dude");
+
+  }
 };
 
 module.exports.commandLibrary = commandLibrary;
